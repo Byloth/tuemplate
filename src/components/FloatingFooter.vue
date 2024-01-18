@@ -4,7 +4,9 @@
 
 <template>
     <footer class="floating-footer">
-        Made with <FontAwesome icon="heart" /> by
+        Made with <FontAwesome icon="heart"
+                               alt="Lots of love!"
+                               title="Lots of love!" /> by
         <a href="https://www.byloth.dev/"
            target="_blank"
            title="Byloth's Website">Byloth</a>.
@@ -26,10 +28,12 @@
 
     .floating-footer
     {
-        background-color: variables.$somewhat-gray;
+        background-color: variables.$chrome-scrollbar-color;
         bottom: 0px;
+        left: 0px;
         padding: 2.5rem;
         position: fixed;
+        right: 0px;
         width: 100%;
         z-index: -1;
 
@@ -37,6 +41,7 @@
         {
             animation: pulse 2s infinite;
             color: red;
+            cursor: help;
         }
     }
 </style>
