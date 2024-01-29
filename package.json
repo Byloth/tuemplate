@@ -1,6 +1,6 @@
 {
   "name": "@byloth/tuemplate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Vue.js 3 template app based on Vite with TypeScript, Pinia, Vue Router and more.",
   "keywords": [
     "Vue.js",
