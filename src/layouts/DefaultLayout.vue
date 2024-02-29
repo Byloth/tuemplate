@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-    import FloatingFooter from "@/components/FloatingFooter.vue";
-    import NavigationBar from "@/components/NavigationBar.vue";
+    import FloatingFooter from "@/components/globals/FloatingFooter.vue";
+    import NavigationBar from "@/components/globals/NavigationBar.vue";
+
     import VueLogo from "@/components/VueLogo.vue";
 </script>
 

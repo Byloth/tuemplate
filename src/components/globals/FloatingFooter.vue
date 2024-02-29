@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-    import FontAwesome from "./FontAwesome.vue";
+    import FontAwesome from "@/components/ui/FontAwesome.vue";
 </script>
 
 <template>

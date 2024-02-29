@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+    import AlertHandler from "./components/handlers/AlertHandler.vue";
     import DefaultLayout from "./layouts/DefaultLayout.vue";
 </script>
 
@@ -6,6 +7,7 @@
     <DefaultLayout>
         <RouterView />
     </DefaultLayout>
+    <AlertHandler />
 </template>
 
 <style lang="scss">
