@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-    <div>
-        This website was made by using:
+    <div id="about-page" class="container">
+        <strong>This website was made by using:</strong>
         <ul>
             <li>
                 <a href="https://vitejs.dev/"
@@ -69,7 +69,7 @@
 </template>
 
 <style lang="scss" scoped>
-    ul
+    #about-page
     {
         text-align: left;
     }

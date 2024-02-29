@@ -11,9 +11,7 @@
             <VueLogo />
         </header>
         <NavigationBar />
-        <main>
-            <slot></slot>
-        </main>
+        <slot></slot>
         <FloatingFooter />
     </div>
 </template>
@@ -23,23 +21,14 @@
 
     .default-layout
     {
-        align-items: center;
         background-color: variables.$slightly-off-white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 100vh;
+        flex: 1;
+        margin-bottom: 104px;
+        min-height: 100svh;
+        padding-top: 64px;
         text-align: center;
-
-        & > header
-        {
-            padding: 2.5rem;
-            padding-bottom: 1.5rem;
-        }
-        & > main
-        {
-            flex: 1;
-        }
+        width: 100%;
     }
 </style>

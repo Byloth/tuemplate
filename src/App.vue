@@ -12,4 +12,9 @@
 
 <style lang="scss">
     @import "@/assets/scss/index";
+
+    #app
+    {
+        overflow: auto;
+    }
 </style>
