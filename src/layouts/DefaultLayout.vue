@@ -1,17 +1,14 @@
 <script lang="ts" setup>
     import FloatingFooter from "@/components/globals/FloatingFooter.vue";
     import NavigationBar from "@/components/globals/NavigationBar.vue";
-
-    import VueLogo from "@/components/VueLogo.vue";
 </script>
 
 <template>
     <div class="default-layout">
-        <header>
-            <VueLogo />
-        </header>
         <NavigationBar />
-        <slot></slot>
+        <div class="content">
+            <slot></slot>
+        </div>
         <FloatingFooter />
     </div>
 </template>
@@ -21,14 +18,16 @@
 
     .default-layout
     {
-        background-color: variables.$slightly-off-white;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
-        flex: 1;
-        margin-bottom: 104px;
+        display: flex;
+        flex-direction: column;
         min-height: 100svh;
-        padding-top: 64px;
-        text-align: center;
         width: 100%;
+
+        .content
+        {
+            background-color: variables.$slightly-off-white;
+            flex: 1;
+        }
     }
 </style>

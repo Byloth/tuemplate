@@ -2,6 +2,7 @@
 
 <template>
     <div id="about-page" class="container">
+        <h1>About this website...</h1>
         <strong>This website was made by using:</strong>
         <ul>
             <li>
@@ -71,6 +72,7 @@
 <style lang="scss" scoped>
     #about-page
     {
-        text-align: left;
+        margin-top: var(--navigation-bar-height);
+        padding-top: 1rem;
     }
 </style>

@@ -2,15 +2,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-html,
-body
+:root
 {
-    height: 100%;
+    --floating-footer-height: 128px;
+    --navigation-bar-height: 64px;
 }
 
 body
 {
-    background-color: variables.$chrome-scrollbar-color;
+    background-color: variables.$chrome-incognito-color;
     color: variables.$not-quite-black;
     font-family: variables.$font-family;
+    margin-bottom: var(--floating-footer-height);
 }

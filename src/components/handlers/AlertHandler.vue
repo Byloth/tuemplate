@@ -58,11 +58,12 @@
     {
         bottom: 0px;
         left: 0px;
+        margin-top: var(--navigation-bar-height);
+        padding-top: 1rem;
+        pointer-events: none;
         position: fixed;
         right: 0px;
-        text-align: initial;
-        pointer-events: none;
-        top: 1em;
+        top: 0px;
         z-index: 5;
 
         & > .alert

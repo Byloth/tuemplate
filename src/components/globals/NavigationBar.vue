@@ -1,12 +1,28 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+    import FontAwesome from "@/components/ui/FontAwesome.vue";
+</script>
 
 <template>
-    <!-- eslint-disable vue/multiline-html-element-content-newline -->
     <nav class="navigation-bar">
-        <RouterLink :to="{ name: 'home' }">
-            Home</RouterLink> |
-        <RouterLink :to="{ name: 'about' }">
-            About</RouterLink>
+        <div class="container row">
+            <div class="col">
+                <RouterLink :to="{ name: 'home' }" class="link link--bold">
+                    Tuemplate
+                </RouterLink>
+            </div>
+            <div class="col col--right">
+                <RouterLink :to="{ name: 'about' }">
+                    About
+                </RouterLink>
+                <a class="link"
+                   href="https://github.com/Byloth/tuemplate"
+                   target="_blank"
+                   title="Tuemplate on GitHub">
+                    GitHub
+                    <FontAwesome icon="square-arrow-up-right" />
+                </a>
+            </div>
+        </div>
     </nav>
 </template>
 
@@ -15,12 +31,35 @@
 
     .navigation-bar
     {
-        padding: 1rem;
+        background-color: rgba(#FFF, 0.5);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 1;
 
-        & > .router-link-exact-active
+        .col--right
         {
-            color: variables.$not-quite-black;
+            text-align: right;
+        }
+
+        .link
+        {
+            display: inline-block;
+            padding: 0.75em 1.5rem;
+        }
+        .link--bold
+        {
             font-weight: bold;
+        }
+
+        & > .container.row
+        {
+            align-items: center;
+            height: var(--navigation-bar-height);
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 </style>

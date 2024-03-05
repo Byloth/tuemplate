@@ -4,12 +4,18 @@
 
 <template>
     <footer class="floating-footer">
-        Made with <FontAwesome icon="heart"
-                               alt="Lots of love!"
-                               title="Lots of love!" /> by
-        <a href="https://www.byloth.dev/"
-           target="_blank"
-           title="Byloth's Website">Byloth</a>.
+        <p>
+            Made with <FontAwesome icon="heart"
+                                   alt="Lots of love!"
+                                   title="Lots of love!" /> by
+            <a class="link link--bold"
+               href="https://www.byloth.dev/"
+               target="_blank"
+               title="Byloth's Website">Byloth</a>.
+        </p>
+        <p>
+            <small>Copywrong (c) 2024 “<b>Tuemplate</b>”. All the wrong reserved.</small>
+        </p>
     </footer>
 </template>
 
@@ -28,20 +34,51 @@
 
     .floating-footer
     {
-        background-color: variables.$chrome-scrollbar-color;
+        align-items: center;
         bottom: 0px;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        height: var(--floating-footer-height);
+        justify-content: center;
         left: 0px;
-        padding: 2.5rem;
         position: fixed;
         right: 0px;
-        width: 100%;
+        text-align: center;
         z-index: -1;
 
-        & > .fa-heart
+        p
+        {
+            margin-bottom: 0.25em;
+
+            &:last-child
+            {
+                margin-bottom: 0px;
+            }
+        }
+
+        .fa-heart
         {
             animation: pulse 2s infinite;
             color: red;
             cursor: help;
+        }
+
+        .link
+        {
+            $link-color: #007FFF;
+
+            --link-color: #{$link-color};
+            &:hover
+            {
+                --link-color: #{lighten($link-color, 10%)};
+            }
+
+            color: var(--link-color);
+        }
+        .link--bold
+        {
+            font-weight: bold;
         }
     }
 </style>

@@ -2,6 +2,7 @@
     import { useVuert } from "@byloth/vuert";
 
     import AppButton from "@/components/ui/AppButton.vue";
+    import VueLogo from "@/components/VueLogo.vue";
 
     const $vuert = useVuert();
 
@@ -81,6 +82,9 @@
 
 <template>
     <div id="home-page">
+        <header>
+            <VueLogo />
+        </header>
         <h1>Your Tuemplate is up and running! 🚀</h1>
         <div>
             <AppButton theme="success" @click="emitSuccess">
@@ -102,6 +106,14 @@
 <style lang="scss" scoped>
     #home-page
     {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: var(--navigation-bar-height);
+        min-height: 100svh;
+        text-align: center;
+
         .btn
         {
             margin: 0.5rem;
