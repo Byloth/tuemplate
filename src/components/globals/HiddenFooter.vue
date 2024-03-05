@@ -3,12 +3,12 @@
 </script>
 
 <template>
-    <footer class="floating-footer">
+    <footer class="hidden-footer">
         <p>
             Made with <FontAwesome icon="heart"
                                    alt="Lots of love!"
                                    title="Lots of love!" /> by
-            <a class="link link--bold"
+            <a class="link bold"
                href="https://www.byloth.dev/"
                target="_blank"
                title="Byloth's Website">Byloth</a>.
@@ -32,14 +32,14 @@
         100% { transform: scale(1); }
     }
 
-    .floating-footer
+    .hidden-footer
     {
         align-items: center;
         bottom: 0px;
         color: #FFF;
         display: flex;
         flex-direction: column;
-        height: var(--floating-footer-height);
+        height: var(--hidden-footer-height);
         justify-content: center;
         left: 0px;
         position: fixed;
@@ -75,10 +75,11 @@
             }
 
             color: var(--link-color);
-        }
-        .link--bold
-        {
-            font-weight: bold;
+
+            &.bold
+            {
+                font-weight: bold;
+            }
         }
     }
 </style>

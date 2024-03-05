@@ -110,8 +110,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: var(--navigation-bar-height);
         min-height: 100svh;
+        padding-top: var(--navigation-bar-height);
         text-align: center;
 
         .btn

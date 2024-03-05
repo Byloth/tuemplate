@@ -4,7 +4,7 @@
 
 :root
 {
-    --floating-footer-height: 128px;
+    --hidden-footer-height: 128px;
     --navigation-bar-height: 64px;
 }
 
@@ -13,5 +13,5 @@ body
     background-color: variables.$chrome-incognito-color;
     color: variables.$not-quite-black;
     font-family: variables.$font-family;
-    margin-bottom: var(--floating-footer-height);
+    margin-bottom: var(--hidden-footer-height);
 }

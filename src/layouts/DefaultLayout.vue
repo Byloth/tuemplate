@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-    import FloatingFooter from "@/components/globals/FloatingFooter.vue";
+    import HiddenFooter from "@/components/globals/HiddenFooter.vue";
     import NavigationBar from "@/components/globals/NavigationBar.vue";
 </script>
 
@@ -9,7 +9,7 @@
         <div class="content">
             <slot></slot>
         </div>
-        <FloatingFooter />
+        <HiddenFooter />
     </div>
 </template>
 

@@ -6,11 +6,11 @@
     <nav class="navigation-bar">
         <div class="container row">
             <div class="col">
-                <RouterLink :to="{ name: 'home' }" class="link link--bold">
+                <RouterLink :to="{ name: 'home' }" class="link bold">
                     Tuemplate
                 </RouterLink>
             </div>
-            <div class="col col--right">
+            <div class="col right">
                 <RouterLink :to="{ name: 'about' }">
                     About
                 </RouterLink>
@@ -39,7 +39,7 @@
         width: 100%;
         z-index: 1;
 
-        .col--right
+        .col.right
         {
             text-align: right;
         }
@@ -48,10 +48,11 @@
         {
             display: inline-block;
             padding: 0.75em 1.5rem;
-        }
-        .link--bold
-        {
-            font-weight: bold;
+
+            &.bold
+            {
+                font-weight: bold;
+            }
         }
 
         & > .container.row
