@@ -1,6 +1,7 @@
 import type { App, ComponentPublicInstance, Plugin } from "vue";
 
-import { HandledException, HandlerBuilder, NetworkException } from "@byloth/exceptions";
+import { NetworkException } from "@byloth/core";
+import { HandledException, HandlerBuilder } from "@byloth/exceptions";
 
 const errorsHandler: Plugin = {
     install(app: App, ...options: unknown[]): void
