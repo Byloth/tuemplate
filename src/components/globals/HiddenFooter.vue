@@ -20,6 +20,7 @@
 </template>
 
 <style lang="scss" scoped>
+    @use "sass:color";
     @use "@/assets/scss/variables";
 
     @keyframes pulse
@@ -71,7 +72,7 @@
             --link-color: #{$link-color};
             &:hover
             {
-                --link-color: #{lighten($link-color, 10%)};
+                --link-color: #{color.adjust($link-color, $lightness: 10%)};
             }
 
             color: var(--link-color);
