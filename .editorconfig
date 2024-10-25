@@ -13,7 +13,7 @@ trim_trailing_whitespace = true
 [config.{js,ts}]
 indent_size = 2
 
-[*.config.{js,ts}]
+[*.config.{js,mjs,ts}]
 indent_size = 2
 
 [.eslintrc.{cjs,js}]
