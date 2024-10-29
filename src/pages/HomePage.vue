@@ -81,7 +81,7 @@
 </script>
 
 <template>
-    <div id="home-page">
+    <div id="home-page" class="page">
         <header>
             <VueLogo />
         </header>
@@ -110,13 +110,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 100svh;
+        min-height: 100dvh;
         padding-top: var(--navigation-bar-height);
         text-align: center;
 
         .btn
         {
-            margin: 0.5rem;
+            margin: 0.5em;
         }
     }
 </style>

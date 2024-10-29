@@ -18,15 +18,14 @@
 
     .default-layout
     {
-        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
-        min-height: 100svh;
         width: 100%;
 
         .content
         {
             background-color: variables.$slightly-off-white;
+            min-height: 100dvh;
             flex: 1;
         }
     }

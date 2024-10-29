@@ -11,7 +11,7 @@
                 </RouterLink>
             </div>
             <div class="col right">
-                <RouterLink :to="{ name: 'about' }">
+                <RouterLink :to="{ name: 'about' }" class="link">
                     About
                 </RouterLink>
                 <a class="link"
@@ -32,7 +32,7 @@
     .navigation-bar
     {
         background-color: rgba(#FFF, 0.5);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(10px);
         position: fixed;
         top: 0px;
@@ -47,7 +47,7 @@
         .link
         {
             display: inline-block;
-            padding: 0.75em 1.5rem;
+            padding: 0.75em 1.5em;
 
             &.bold
             {
