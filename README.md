@@ -29,3 +29,9 @@ pnpm run build
 ```sh
 pnpm run lint
 ```
+
+### Run Unit Tests & Watch for Changes
+
+```sh
+pnpm run test
+```
