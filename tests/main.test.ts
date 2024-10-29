@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-describe("Main Component", () =>
+describe("Example Test", () =>
 {
     it("works properly", () =>
     {
