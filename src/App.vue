@@ -15,7 +15,7 @@
 </template>
 
 <style lang="scss">
-    @import "@/assets/scss/index";
+    @use "@/assets/scss/index" as *;
 
     #app
     {

@@ -9,7 +9,8 @@ $enable-shadows: true;
 /*
  * Colors:
  */
-$theme-colors: (
+$theme-colors:
+(
   "primary": variables.$primary,
   "secondary": variables.$secondary,
   "accent": variables.$accent,
@@ -35,7 +36,8 @@ $grid-breakpoints:
 );
 $grid-gutter-width: 0px;
 
-$container-max-widths: (
+$container-max-widths:
+(
     sm: variables.$container-sm-size,
     md: variables.$container-md-size,
     lg: variables.$container-lg-size,
@@ -50,7 +52,22 @@ $link-color: variables.$primary;
 $link-decoration: none;
 $link-hover-decoration: underline;
 
-@import "bootstrap/scss/bootstrap";
+@use "bootstrap/scss/bootstrap" as bs with
+(
+    $enable-gradients: $enable-gradients,
+    $enable-shadows: $enable-shadows,
+
+    $theme-colors: $theme-colors,
+
+    $grid-breakpoints: $grid-breakpoints,
+    $grid-gutter-width: $grid-gutter-width,
+
+    $container-max-widths: $container-max-widths,
+
+    $link-color: $link-color,
+    $link-decoration: $link-decoration,
+    $link-hover-decoration: $link-hover-decoration
+);
 
 .alert
 {
@@ -58,9 +75,9 @@ $link-hover-decoration: underline;
     {
         &.alert-#{$color}
         {
-            $alert-background: shade-color($value, 80%);
-            $alert-border: shade-color($value, 40%);
-            $alert-color: tint-color($value, 40%);
+            $alert-background: bs.shade-color($value, 80%);
+            $alert-border: bs.shade-color($value, 40%);
+            $alert-color: bs.tint-color($value, 40%);
 
             hr
             {
@@ -86,11 +103,11 @@ $link-hover-decoration: underline;
             {
                 &:hover
                 {
-                    color: shift-color($alert-color, $link-shade-percentage);
+                    color: bs.shift-color($alert-color, bs.$link-shade-percentage);
                 }
                 &:active
                 {
-                    color: shift-color($alert-color, -$link-shade-percentage);
+                    color: bs.shift-color($alert-color, - bs.$link-shade-percentage);
                 }
             }
             .btn-close
@@ -100,13 +117,13 @@ $link-hover-decoration: underline;
 
             .btn-primary
             {
-                @include button-variant($value, $value);
+                @include bs.button-variant($value, $value);
             }
             .btn-secondary
             {
-                $outline-color: tint-color($value, 25%);
+                $outline-color: bs.tint-color($value, 25%);
 
-                @include button-outline-variant($outline-color);
+                @include bs.button-outline-variant($outline-color);
 
                 background-color: rgba($outline-color, 0);
 
