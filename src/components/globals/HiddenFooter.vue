@@ -1,5 +1,7 @@
 <script lang="ts" setup>
     import FontAwesome from "@/components/ui/FontAwesome.vue";
+
+    const currentYear = new Date().getFullYear();
 </script>
 
 <template>
@@ -14,7 +16,7 @@
                title="Byloth's Website">Byloth</a>.
         </p>
         <p>
-            <small>Copywrong ©️ 2024 “<b>Tuemplate</b>”. All the wrongs reserved.</small>
+            <small>Copywrong ©️ 2024 - {{ currentYear }} “<b>Tuemplate</b>”. All the wrongs reserved.</small>
         </p>
     </footer>
 </template>
