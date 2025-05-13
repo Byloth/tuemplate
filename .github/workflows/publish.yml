@@ -15,28 +15,21 @@ jobs:
     steps:
       - name: Cloning source code
         uses: actions/checkout@v4
-      - name: "`pnpm` installation"
-        uses: pnpm/action-setup@v3
-        with:
-          version: latest
-
-      - name: Configuring Node.js 20 (LTS)
-        uses: actions/setup-node@v4
-        with:
-          cache: pnpm
-          node-version: 20
-
+      - name: "`bun` installation"
+        uses: oven-sh/setup-bun@v2
       - name: Installing dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install
       - name: Linting the source code
-        run: pnpm lint
+        run: bun run lint
         env:
           NODE_ENV: production
 
       - name: Checking type consistency
-        run: pnpm typecheck
+        run: bun run typecheck
+      - name: Running unit tests
+        run: bun run test
       - name: Building the source code
-        run: pnpm build
+        run: bun run build
       - name: Uploading the artifact
         uses: actions/upload-artifact@v4
         with:
@@ -48,7 +41,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       pages: write
       id-token: write
 
